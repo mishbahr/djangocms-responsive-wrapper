@@ -1,6 +1,6 @@
-=============================
-djangocms-responsive-wrapper
-=============================
+===================================
+djangocms-responsive-wrapper (WIP)
+===================================
 
 .. image:: http://img.shields.io/travis/mishbahr/djangocms-responsive-wrapper.svg?style=flat-square
     :target: https://travis-ci.org/mishbahr/djangocms-responsive-wrapper/
@@ -20,27 +20,28 @@ djangocms-responsive-wrapper
 .. image:: http://img.shields.io/coveralls/mishbahr/djangocms-responsive-wrapper.svg?style=flat-square
   :target: https://coveralls.io/r/mishbahr/djangocms-responsive-wrapper?branch=master
 
-This projects integrates django-responsive2 with django-cms >= 3.0
+This projects integrates ``django-responsive2`` with django-cms >= 3.0
+
+Features
+--------
+
+* TODO
+
 
 Quickstart
 ----------
 
-1. Install `djangocms-responsive-wrapper`::
+1. Install ``djangocms-responsive-wrapper``::
 
     pip install djangocms-responsive-wrapper
 
-2. Add `responsive_wrapper` to `INSTALLED_APPS`::
+2. Add ``responsive_wrapper`` to ``INSTALLED_APPS``::
 
     INSTALLED_APPS = (
         ...
         'responsive_wrapper',
         ...
     )
-
-Features
---------
-
-* TODO
 
 Documentation
 -------------
