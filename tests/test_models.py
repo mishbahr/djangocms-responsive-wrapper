@@ -8,14 +8,13 @@ test_djangocms-responsive-wrapper
 Tests for `djangocms-responsive-wrapper` models module.
 """
 
-import os
-import shutil
-import unittest
+from django.conf import settings
+from django.test import TestCase
 
 from responsive_wrapper import models
 
 
-class TestResponsive_wrapper(unittest.TestCase):
+class TestResponsive_wrapper(TestCase):
 
     def setUp(self):
         pass
