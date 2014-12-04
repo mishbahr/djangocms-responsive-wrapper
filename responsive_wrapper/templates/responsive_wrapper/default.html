@@ -1,0 +1,11 @@
+{% load cms_tags %}
+
+{% if render_child_plugins %}
+    {% for plugin in instance.child_plugin_instances %}
+        {% render_plugin plugin %}
+    {% endfor %}
+{% endif %}
+
+
+
+
