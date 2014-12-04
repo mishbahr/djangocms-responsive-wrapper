@@ -14,6 +14,7 @@ try:
         'DATABASES': {
             'default': {
                 'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': 'responsive',
             }
         },
         'ROOT_URLCONF': 'responsive_wrapper.urls',
