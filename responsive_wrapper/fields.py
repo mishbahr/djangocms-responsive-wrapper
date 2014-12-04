@@ -1,5 +1,5 @@
-from django.db import models
 from django.core.serializers.json import DjangoJSONEncoder
+from django.db import models
 from django.utils import six
 
 # South support.

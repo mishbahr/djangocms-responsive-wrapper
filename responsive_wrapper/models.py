@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-from django.utils.encoding import force_text
-
 from django.utils import six
-from django.utils.encoding import python_2_unicode_compatible
+from django.utils.encoding import force_text, python_2_unicode_compatible
+
 from cms.models.pluginmodel import CMSPlugin
 
 from .conf import settings

@@ -3,10 +3,8 @@ from django.core.exceptions import ImproperlyConfigured
 from django.utils import six
 from django.utils.safestring import mark_safe
 
-
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
-
 
 from .conf import settings
 from .forms import ResponsiveWrapperForm
