@@ -1,6 +1,6 @@
-===================================
-djangocms-responsive-wrapper (WIP)
-===================================
+=============================
+djangocms-responsive-wrapper 
+=============================
 
 .. image:: http://img.shields.io/travis/mishbahr/djangocms-responsive-wrapper.svg?style=flat-square
     :target: https://travis-ci.org/mishbahr/djangocms-responsive-wrapper/
