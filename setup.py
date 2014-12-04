@@ -36,10 +36,13 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
+        'django-appconf',
+        'django-cms>=3.0',
+        'django-responsive2',
     ],
     license="BSD",
     zip_safe=False,
-    keywords='djangocms-responsive-wrapper',
+    keywords='djangocms-responsive-wrapper, django-responsive2, django-cms',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Framework :: Django',
