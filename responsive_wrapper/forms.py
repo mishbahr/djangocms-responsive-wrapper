@@ -1,8 +1,3 @@
-try:
-    import json
-except ImportError:
-    from django.utils import simplejson as json
-
 from django import forms
 from django.utils import six
 
@@ -33,4 +28,3 @@ class ResponsiveWrapperForm(forms.ModelForm):
 
     class Meta:
         model = ResponsiveWrapper
-

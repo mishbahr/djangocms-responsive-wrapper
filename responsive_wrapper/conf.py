@@ -18,4 +18,3 @@ class ResponsiveWrapperConf(AppConf):
 
     class Meta:
         prefix = 'responsive_wrapper'
-

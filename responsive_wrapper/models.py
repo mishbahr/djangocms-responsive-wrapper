@@ -1,11 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.utils.encoding import force_text
 
-try:
-    import json
-except ImportError:
-    from django.utils import simplejson as json
-
 from django.utils import six
 from django.utils.encoding import python_2_unicode_compatible
 from cms.models.pluginmodel import CMSPlugin
