@@ -19,7 +19,7 @@ try:
             'django.contrib.sites',
             'django.contrib.messages',
             'django.contrib.admin',
-            'south'
+            'south',
             'cms',
             'mptt',
             'menus',
