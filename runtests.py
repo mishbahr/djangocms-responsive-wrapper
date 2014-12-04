@@ -25,7 +25,6 @@ try:
             'django.contrib.sites',
             'django.contrib.messages',
             'django.contrib.admin',
-            'south',
             'cms',
             'mptt',
             'menus',
