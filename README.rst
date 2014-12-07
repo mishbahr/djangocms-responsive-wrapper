@@ -2,9 +2,6 @@
 djangocms-responsive-wrapper 
 =============================
 
-.. image:: http://img.shields.io/travis/mishbahr/djangocms-responsive-wrapper.svg?style=flat-square
-    :target: https://travis-ci.org/mishbahr/djangocms-responsive-wrapper/
-
 .. image:: http://img.shields.io/pypi/v/djangocms-responsive-wrapper.svg?style=flat-square
     :target: https://pypi.python.org/pypi/djangocms-responsive-wrapper/
     :alt: Latest Version
@@ -17,8 +14,6 @@ djangocms-responsive-wrapper
     :target: https://pypi.python.org/pypi/djangocms-responsive-wrapper/
     :alt: License
 
-.. image:: http://img.shields.io/coveralls/mishbahr/djangocms-responsive-wrapper.svg?style=flat-square
-  :target: https://coveralls.io/r/mishbahr/djangocms-responsive-wrapper?branch=master
 
 This projects integrates `django-responsive2 <https://github.com/mishbahr/django-responsive2>`_ with `django-cms >= 3.0 <https://github.com/divio/django-cms/>`_
 
@@ -48,13 +43,9 @@ Quickstart
 Configuration
 -------------
 
-These are the list of options that can be overridden for this plugin. Please refer to django-cms documentation for full details:
-
+These are the list of options that can be overridden for this plugin. Please refer to django-cms documentation (http://django-cms.readthedocs.org/en/latest/extending_cms/custom_plugins.html) for more information.
  
-http://django-cms.readthedocs.org/en/latest/extending_cms/custom_plugins.html 
 
-
-------------
 
 ``RESPONSIVE_WRAPPER_MODULE``
 
