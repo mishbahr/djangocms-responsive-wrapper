@@ -15,11 +15,12 @@ class ResponsiveWrapperPlugin(CMSPluginBase):
     model = ResponsiveWrapper
     form = ResponsiveWrapperForm
     allow_children = True
+    cache = False
 
     render_template = settings.RESPONSIVE_WRAPPER_TEMPLATE
     name = settings.RESPONSIVE_WRAPPER_NAME
     module = settings.RESPONSIVE_WRAPPER_MODULE
-    cache = settings.RESPONSIVE_WRAPPER_CACHE
+    
     text_enabled = settings.RESPONSIVE_WRAPPER_TEXT_ENABLED
     page_only = settings.RESPONSIVE_WRAPPER_PAGE_ONLY
     child_classes = settings.RESPONSIVE_WRAPPER_CHILD_CLASSES

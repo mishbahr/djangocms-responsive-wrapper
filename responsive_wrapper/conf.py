@@ -5,7 +5,6 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class ResponsiveWrapperConf(AppConf):
-    CACHE = getattr(settings, 'CMS_PLUGIN_CACHE', True)
     CHILD_CLASSES = None
     FIELDSETS = None
     MODULE = _('Generic')
