@@ -45,7 +45,79 @@ Quickstart
         ...
     )
 
-Documentation
+Configuration
 -------------
 
-The full documentation is at https://djangocms-responsive-wrapper.readthedocs.org.
+These are the list of options that can be overridden for this plugin. Please refer to django-cms documentation for full details:
+
+ 
+http://django-cms.readthedocs.org/en/latest/extending_cms/custom_plugins.html 
+
+
+------------
+
+``RESPONSIVE_WRAPPER_MODULE``
+
+Default: ``Generic``
+
+------------
+
+``RESPONSIVE_WRAPPER_NAME``
+
+Default: ``Responsive Wrapper``
+
+------------
+
+``RESPONSIVE_WRAPPER_TEMPLATE``
+
+The path to the template used to render the template. 
+
+Default: ``'responsive_wrapper/default.html'``
+
+------------
+
+``RESPONSIVE_WRAPPER_TEXT_ENABLED``
+
+Can the plugin be inserted inside the text plugin?
+
+Default: ``False``
+
+------------
+
+``RESPONSIVE_WRAPPER_PAGE_ONLY``
+
+Can this plugin only be attached to a placeholder that is attached to a page?
+
+Default: ``False``
+
+------------
+
+``RESPONSIVE_WRAPPER_CHILD_CLASSES``
+
+A List of Plugin Class Names. If this is set, only plugins listed here can be added to this plugin
+
+Default: ``None``
+
+------------
+
+``RESPONSIVE_WRAPPER_REQUIRE_PARENT``
+
+Is it required that this plugin is a child of another plugin? Or can it be added to any placeholder.
+
+Default: ``False``
+
+------------
+
+``RESPONSIVE_WRAPPER_PARENT_CLASSES``
+
+A list of Plugin Class Names. If this is set, this plugin may only be added to plugins listed here.
+
+Default: ``None``
+
+------------
+
+``RESPONSIVE_WRAPPER_FIELDSETS``
+
+Set fieldsets to control the layout of plugin “add” and “change” form.
+
+Default: ``None``
