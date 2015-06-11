@@ -112,3 +112,12 @@ Default: ``None``
 Set fieldsets to control the layout of plugin “add” and “change” form.
 
 Default: ``None``
+
+
+You may also like...
+--------------------
+
+* djangocms-forms — https://github.com/mishbahr/djangocms-forms
+* djangocms-gmaps — https://github.com/mishbahr/djangocms-gmaps
+* djangocms-instagram — https://github.com/mishbahr/djangocms-instagram
+* djangocms-twitter2 — https://github.com/mishbahr/djangocms-twitter2
