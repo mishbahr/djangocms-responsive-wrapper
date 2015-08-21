@@ -121,3 +121,4 @@ You may also like...
 * djangocms-gmaps — https://github.com/mishbahr/djangocms-gmaps
 * djangocms-instagram — https://github.com/mishbahr/djangocms-instagram
 * djangocms-twitter2 — https://github.com/mishbahr/djangocms-twitter2
+* djangocms-youtube - https://github.com/mishbahr/djangocms-youtube
