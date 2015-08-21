@@ -21,13 +21,12 @@ if sys.argv[-1] == 'publish':
     sys.exit()
 
 readme = open('README.rst').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
     name='djangocms-responsive-wrapper',
     version=version,
     description="""This projects integrates django-responsive2 with django-cms >= 3.0""",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     author='Mishbah Razzaque',
     author_email='mishbahx@gmail.com',
     url='https://github.com/mishbahr/djangocms-responsive-wrapper',
@@ -44,13 +43,11 @@ setup(
     zip_safe=False,
     keywords='djangocms-responsive-wrapper, django-responsive2, django-cms',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
         'Framework :: Django',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',

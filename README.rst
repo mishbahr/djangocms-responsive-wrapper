@@ -57,7 +57,6 @@ Default: ``Generic``
 
 Default: ``Responsive Wrapper``
 
-------------
 
 ``RESPONSIVE_WRAPPER_TEMPLATE``
 
@@ -65,7 +64,6 @@ The path to the template used to render the template.
 
 Default: ``'responsive_wrapper/default.html'``
 
-------------
 
 ``RESPONSIVE_WRAPPER_TEXT_ENABLED``
 
@@ -73,7 +71,6 @@ Can the plugin be inserted inside the text plugin?
 
 Default: ``False``
 
-------------
 
 ``RESPONSIVE_WRAPPER_PAGE_ONLY``
 
@@ -81,7 +78,6 @@ Can this plugin only be attached to a placeholder that is attached to a page?
 
 Default: ``False``
 
-------------
 
 ``RESPONSIVE_WRAPPER_CHILD_CLASSES``
 
@@ -89,7 +85,6 @@ A List of Plugin Class Names. If this is set, only plugins listed here can be ad
 
 Default: ``None``
 
-------------
 
 ``RESPONSIVE_WRAPPER_REQUIRE_PARENT``
 
@@ -97,7 +92,6 @@ Is it required that this plugin is a child of another plugin? Or can it be added
 
 Default: ``False``
 
-------------
 
 ``RESPONSIVE_WRAPPER_PARENT_CLASSES``
 
@@ -105,7 +99,6 @@ A list of Plugin Class Names. If this is set, this plugin may only be added to p
 
 Default: ``None``
 
-------------
 
 ``RESPONSIVE_WRAPPER_FIELDSETS``
 
