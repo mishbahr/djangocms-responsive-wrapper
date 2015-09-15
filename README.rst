@@ -43,68 +43,42 @@ Quickstart
 Configuration
 -------------
 
-These are the list of options that can be overridden for this plugin. Please refer to django-cms documentation (http://django-cms.readthedocs.org/en/latest/extending_cms/custom_plugins.html) for more information.
- 
+Plugin(s) Module::
 
+    RESPONSIVE_WRAPPER_MODULE = _('Generic')
 
-``RESPONSIVE_WRAPPER_MODULE``
+Name of the plugin::
 
-Default: ``Generic``
+    RESPONSIVE_WRAPPER_NAME = _('Responsive Wrapper')
 
-------------
+The path to the template used to render the template::
 
-``RESPONSIVE_WRAPPER_NAME``
-
-Default: ``Responsive Wrapper``
-
-
-``RESPONSIVE_WRAPPER_TEMPLATE``
-
-The path to the template used to render the template. 
-
-Default: ``'responsive_wrapper/default.html'``
-
-
-``RESPONSIVE_WRAPPER_TEXT_ENABLED``
+    RESPONSIVE_WRAPPER_TEMPLATE = 'responsive_wrapper/default.html'
 
 Can the plugin be inserted inside the text plugin?
+::
 
-Default: ``False``
+    RESPONSIVE_WRAPPER_TEXT_ENABLED = False
 
+Can this plugin only be attached to a placeholder that is attached to a page?::
 
-``RESPONSIVE_WRAPPER_PAGE_ONLY``
+    RESPONSIVE_WRAPPER_PAGE_ONLY = False
 
-Can this plugin only be attached to a placeholder that is attached to a page?
+A List of Plugin Class Names. If this is set, only plugins listed here can be added to this plugin::
 
-Default: ``False``
+    RESPONSIVE_WRAPPER_CHILD_CLASSES = None
 
+Is it required that this plugin is a child of another plugin? Or can it be added to any placeholder::
 
-``RESPONSIVE_WRAPPER_CHILD_CLASSES``
+    RESPONSIVE_WRAPPER_REQUIRE_PARENT = False
 
-A List of Plugin Class Names. If this is set, only plugins listed here can be added to this plugin
+A list of Plugin Class Names. If this is set, this plugin may only be added to plugins listed here::
 
-Default: ``None``
+    RESPONSIVE_WRAPPER_PARENT_CLASSES = None
 
+Set fieldsets to control the layout of plugin “add” and “change” form::
 
-``RESPONSIVE_WRAPPER_REQUIRE_PARENT``
-
-Is it required that this plugin is a child of another plugin? Or can it be added to any placeholder.
-
-Default: ``False``
-
-
-``RESPONSIVE_WRAPPER_PARENT_CLASSES``
-
-A list of Plugin Class Names. If this is set, this plugin may only be added to plugins listed here.
-
-Default: ``None``
-
-
-``RESPONSIVE_WRAPPER_FIELDSETS``
-
-Set fieldsets to control the layout of plugin “add” and “change” form.
-
-Default: ``None``
+    RESPONSIVE_WRAPPER_FIELDSETS = None
 
 
 You may also like...
