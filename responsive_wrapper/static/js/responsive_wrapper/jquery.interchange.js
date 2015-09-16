@@ -1,6 +1,6 @@
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
-;(function ( $, window, document, undefined ) {
+;(function($, window, document, undefined) {
 
     var interchange = 'interchange',
         defaults = {
@@ -8,7 +8,7 @@
         };
 
     // The actual plugin constructor
-    function Interchange (element, options ) {
+    function Interchange(element, options) {
         this.element = $(element);
         this.settings = $.extend({}, defaults, options);
         this._defaults = defaults;
@@ -17,18 +17,18 @@
     }
 
     Interchange.prototype = {
-        init: function () {
+        init: function() {
             console.log('xD');
         },
-        yourOtherFunction: function () {
+        yourOtherFunction: function() {
             // some logic
         }
     };
 
-    $.fn[interchange] = function (options) {
+    $.fn[interchange] = function(options) {
         return this.each(function() {
-            if ( !$.data( this, 'plugin_' + interchange ) ) {
-                $.data( this, 'plugin_' + interchange, new Interchange(this, options) );
+            if (!$.data(this, 'plugin_' + interchange)) {
+                $.data(this, 'plugin_' + interchange, new Interchange(this, options));
             }
         });
     };
