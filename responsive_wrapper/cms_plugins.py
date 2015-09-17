@@ -6,6 +6,8 @@ from django.utils.safestring import mark_safe
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 
+from responsive.utils import Device
+
 from .conf import settings
 from .forms import ResponsiveWrapperForm
 from .models import ResponsiveWrapper
@@ -28,19 +30,31 @@ class ResponsiveWrapperPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         context = super(ResponsiveWrapperPlugin, self).render(context, instance, placeholder)
-        device = getattr(context['request'], settings.RESPONSIVE_VARIABLE_NAME, None)
+        request = context.get('request', None)
+
+        device = getattr(request, settings.RESPONSIVE_VARIABLE_NAME, None)
         if not device:
             raise ImproperlyConfigured(
                 "You must enable the 'ResponsiveMiddleware'. Edit your "
                 "MIDDLEWARE_CLASSES setting to insert"
                 "the 'responsive.middleware.ResponsiveMiddleware'")
 
-        render_child_plugins = False
+        if request.is_ajax():
+            device_info = {
+                'width': request.GET.get('width', device.width),
+                'height': request.GET.get('width', device.height),
+                'pixel_ratio': request.GET.get('dpr', device.pixel_ratio),
+            }
+            device = Device(**device_info)
+
+        context[settings.RESPONSIVE_VARIABLE_NAME] = device
+
+        matched_media_query = False
         for name, value in six.iteritems(instance.media_queries):
             if value is True and name in device.matched:
-                render_child_plugins = True
+                matched_media_query = True
 
-        context['render_child_plugins'] = render_child_plugins
+        context['matched_media_query'] = matched_media_query
         return context
 
     def render_change_form(self, request, context, add=False, change=False, form_url='', obj=None):

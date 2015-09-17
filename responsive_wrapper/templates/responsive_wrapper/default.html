@@ -1,11 +1,21 @@
-{% load cms_tags %}
+{% load staticfiles cms_tags sekizai_tags %}
 
-{% if render_child_plugins %}
-    {% for plugin in instance.child_plugin_instances %}
-        {% render_plugin plugin %}
-    {% endfor %}
+{% if not request.is_ajax %}
+    <div class="responsive-wrapper js-render" data-ajax-url="{% url 'ajax-render' instance.hash_id %}"></div>
+
+    {% addtoblock 'js' %}
+        <script src="{% static 'js/responsive_wrapper/jquery.responsive-wrapper.js' %}"></script>
+    {% endaddtoblock %}
+
+    {% addtoblock 'js' %}
+        <script type="text/javascript">
+            $('.js-render').render();
+        </script>
+    {% endaddtoblock %}
+{% else %}
+    {% if matched_media_query %}
+        {% for plugin in instance.child_plugin_instances %}
+            {% render_plugin plugin %}
+        {% endfor %}
+    {% endif %}
 {% endif %}
-
-
-
-
