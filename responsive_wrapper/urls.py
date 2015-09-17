@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from views import ajax_render
+from .views import ajax_render
 
 urlpatterns = patterns(
     '',
