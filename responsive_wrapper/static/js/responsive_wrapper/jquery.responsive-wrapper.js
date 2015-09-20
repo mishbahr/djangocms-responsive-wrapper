@@ -46,7 +46,7 @@
         dpr: window.devicePixelRatio || (window.screen.deviceXDPI / window.screen.logicalXDPI) || 1
       }, function(response) {
         that.el.html(response);
-        that.el.trigger('rendered');
+        that.el.trigger('replace');
       });
     }
   };
