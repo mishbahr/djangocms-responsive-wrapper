@@ -1,5 +1,5 @@
 =============================
-djangocms-responsive-wrapper 
+djangocms-responsive-wrapper
 =============================
 
 .. image:: http://img.shields.io/pypi/v/djangocms-responsive-wrapper.svg?style=flat-square
@@ -39,6 +39,24 @@ Quickstart
         'responsive_wrapper',
         ...
     )
+
+AJAX load plugin based on window size
+-------------------------------------
+By default, ``responsive_wrapper`` renders the plugins based on device dimensions.
+
+However, if you would like the plugin to use the window size to render the plugin, set the ``RESPONSIVE_WRAPPER_TEMPLATE`` to use an alternate template::
+
+    RESPONSIVE_WRAPPER_TEMPLATE = 'responsive_wrapper/live_reload.html'
+
+And add the ``responsive_wrapper.urls`` to your project's ``urls`` module or create a django CMS page to hook the application into. In ``Advanced Settings``, set its Application to ``Responsive Wrapper`` (this requires a server restart)::
+
+    urlpatterns = patterns(
+        ...
+        url(r'^responsive/', include('responsive_wrapper.urls')),
+        ...
+    )
+
+The ``ResponsiveWrapper.js``, included in the ``live_reload.html`` triggers a ``replace`` event when the content has been replaced. This can be useful when you want to change some styles  or reinitialize any JavaScript on your page based on which content is loaded.
 
 Configuration
 -------------
