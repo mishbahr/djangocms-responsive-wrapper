@@ -38,6 +38,7 @@ setup(
         'django-appconf',
         'django-cms>=3.0',
         'django-responsive2',
+        'hashids',
     ],
     license="BSD",
     zip_safe=False,

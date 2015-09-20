@@ -1,0 +1,26 @@
+{% load staticfiles cms_tags sekizai_tags %}
+
+{% if not request.is_ajax %}
+    <div class="responsive-wrapper js-render" data-ajax-url="{% url 'render-plugin' instance.hash_id %}">
+        {% for plugin in instance.child_plugin_instances %}
+            {% render_plugin plugin %}
+        {% endfor %}
+    </div>
+
+    {% addtoblock 'js' %}
+        <script src="{% static 'js/responsive_wrapper/jquery.responsive-wrapper.js' %}"></script>
+    {% endaddtoblock %}
+
+    {% addtoblock 'js' %}
+        <script type="text/javascript">
+            $('.js-render').render();
+        </script>
+    {% endaddtoblock %}
+{% else %}
+    {% if matched_media_query %}
+        {% for plugin in instance.child_plugin_instances %}
+            {% render_plugin plugin %}
+        {% endfor %}
+    {% endif %}
+{% endif %}
+

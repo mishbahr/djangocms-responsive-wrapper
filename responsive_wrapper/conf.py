@@ -15,5 +15,7 @@ class ResponsiveWrapperConf(AppConf):
     TEMPLATE = 'responsive_wrapper/default.html'
     TEXT_ENABLED = False
 
+    HASHIDS_SALT = settings.SECRET_KEY
+
     class Meta:
         prefix = 'responsive_wrapper'

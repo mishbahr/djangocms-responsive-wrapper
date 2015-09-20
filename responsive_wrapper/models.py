@@ -6,6 +6,7 @@ from cms.models.pluginmodel import CMSPlugin
 
 from .conf import settings
 from .fields import JSONField
+from .utils import int_to_hashid
 
 
 @python_2_unicode_compatible
@@ -29,3 +30,9 @@ class ResponsiveWrapper(CMSPlugin):
                 ', '.join(media_queries[:-1]), media_queries[-1])
         elif media_queries:
             return u'Visible on {0}.'.format(media_queries[0])
+
+    @property
+    def hash_id(self):
+        if self.pk:
+            return int_to_hashid(self.pk)
+        return ''
