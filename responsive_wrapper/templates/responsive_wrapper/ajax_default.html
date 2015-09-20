@@ -1,7 +1,11 @@
 {% load staticfiles cms_tags sekizai_tags %}
 
 {% if not request.is_ajax %}
-    <div class="responsive-wrapper js-render" data-ajax-url="{% url 'ajax-render' instance.hash_id %}"></div>
+    <div class="responsive-wrapper js-render" data-ajax-url="{% url 'render-plugin' instance.hash_id %}">
+        {% for plugin in instance.child_plugin_instances %}
+            {% render_plugin plugin %}
+        {% endfor %}
+    </div>
 
     {% addtoblock 'js' %}
         <script src="{% static 'js/responsive_wrapper/jquery.responsive-wrapper.js' %}"></script>
@@ -19,3 +23,4 @@
         {% endfor %}
     {% endif %}
 {% endif %}
+

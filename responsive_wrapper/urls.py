@@ -1,8 +1,8 @@
 from django.conf.urls import patterns, url
 
-from .views import ajax_render
+from .views import render_plugin
 
 urlpatterns = patterns(
     '',
-    url(r'^render/(?P<plugin_id>[-\w]+)/$', ajax_render, name='ajax-render')
+    url(r'^render/(?P<plugin_id>[-\w]+)/$', render_plugin, name='render-plugin')
 )

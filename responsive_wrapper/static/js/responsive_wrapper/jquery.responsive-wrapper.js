@@ -2,10 +2,7 @@
 // scripts and/or other plugins which may not be closed properly.
 ;(function($, window, document, undefined) {
 
-  var render = 'render',
-    defaults = {
-
-    };
+  var render = 'render';
 
   function ResponsiveWrapper(el, options) {
     this.el = $(el);
@@ -49,6 +46,7 @@
         dpr: window.devicePixelRatio || (window.screen.deviceXDPI / window.screen.logicalXDPI) || 1
       }, function(response) {
         that.el.html(response);
+        that.el.trigger('rendered');
       });
     }
   };

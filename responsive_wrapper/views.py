@@ -11,7 +11,7 @@ from cms.utils.plugins import build_plugin_tree, downcast_plugins
 from .utils import hashid_to_int
 
 
-def ajax_render(request, plugin_id, template_name='responsive_wrapper/ajax_render.html'):
+def render_plugin(request, plugin_id, template_name='responsive_wrapper/render_plugin.html'):
     try:
         instance = CMSPlugin.objects.get(pk=hashid_to_int(plugin_id))
     except CMSPlugin.DoesNotExist:
